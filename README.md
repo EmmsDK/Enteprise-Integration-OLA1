@@ -1,6 +1,6 @@
 # **Enterprise-Integration-OLA1**
 
-## **Report on Enterprise Integration Patterns and Technologies
+## **Report on Enterprise Integration Patterns and Technologies**
 
 ### **Introduction to Enterprise Integration**
 
