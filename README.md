@@ -13,7 +13,7 @@ Monolithic applications are structured as a single, unified unit. All the functi
 #### Characteristics of Monolithic Applications:
 1. **Single Codebase:** All components of the application, including user interface, business logic, and data access layers, are combined into one cohesive unit.
 2. **Simple Deployment:** Since the entire application is a single executable or set of files, deploying updates or bug fixes is relatively straightforward. This simplicity makes monolithic applications appealing for small-scale applications【(https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith)】.
-3. **Centralized Management:** Monolithic applications are easier to debug and test because everything is centralized. Developers can trace issues quickly without needing to consider how multiple services might interact【(https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/)】,【(https://hatchworks.com/blog/software-development/monolithic-vs-microservices/)】.
+3. **Centralized Management:** Monolithic applications are easier to debug and test because everything is centralized. Developers can trace issues quickly without needing to consider how multiple services might interact【(https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/)】.【(https://hatchworks.com/blog/software-development/monolithic-vs-microservices/)】.
 
 #### Disadvantages of Monolithic Architecture:
 1. **Scalability Challenges:** Scaling monolithic applications can be inefficient since the entire application must scale, even if only a small part needs more resources【(https://www.openlegacy.com/blog/monolithic-application)】.
