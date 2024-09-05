@@ -1,6 +1,6 @@
 # **Enterprise-Integration-OLA1**
 
-## **Report on Enterprise Integration: Monolithic vs. Microservices Architectures**
+## **Report on Enterprise Integration Patterns and Technologies
 
 ### **Introduction to Enterprise Integration**
 
