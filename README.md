@@ -2,96 +2,95 @@
 
 ## **Report on Enterprise Integration Patterns and Technologies**
 
-### **Introduction to Enterprise Integration**
+### **Introduktion til Enterprise Integration**
 
-**Enterprise Integration (EI)** is the process of enabling communication and data sharing between different applications and systems across an organization. It combines various integration approaches such as **API management**, **application integration**, and **messaging** to leverage enterprise services and data. EI aims to create a unified IT environment where different systems can share data and work together efficiently, helping organizations automate processes and streamline operations.
+**Enterprise Integration (EI)** er processen med at muliggøre kommunikation og datadeling mellem forskellige applikationer og systemer på tværs af en organisation. Det kombinerer forskellige integrationsmetoder såsom **API-styring**, **applikationsintegration** og **beskeder** for at udnytte virksomhedens tjenester og data. EI sigter mod at skabe et samlet IT-miljø, hvor forskellige systemer kan dele data og arbejde sammen effektivt, hvilket hjælper organisationer med at automatisere processer og strømline driften.
 
-Effective enterprise integration helps to:
-- **Discover and expose valuable services, applications, and data** through APIs.
-- **Connect multiple enterprise services** across various platforms.
-- **Monitor application lifecycles** to ensure governance and adherence to company policies.
-  
-By facilitating these capabilities, EI plays a crucial role in enhancing internal processes and optimizing the creation, implementation, and delivery of business-critical applications.
+Effektiv enterprise integration hjælper med at:
+- **Opdage og eksponere værdifulde tjenester, applikationer og data** gennem API'er.
+- **Forbinde flere virksomhedstjenester** på tværs af forskellige platforme.
+- **Overvåge applikationers livscyklus** for at sikre overholdelse af governance og virksomhedsretningslinjer.
 
-### Why is Enterprise Integration Important?
+Ved at muliggøre disse kapaciteter spiller EI en afgørende rolle i at forbedre interne processer og optimere skabelsen, implementeringen og leveringen af forretningskritiske applikationer.
 
-Enterprise integration is vital for modern organizations because it allows seamless data exchange and simplifies complex IT processes. By implementing effective EI strategies, organizations can:
-- **Share critical information** across different departments, systems, and applications, ensuring that important data is always accessible where needed.
-- **Simplify IT processes** through efficient collaboration and streamlined workflows that reduce redundancy and manual work.
-- **Maximize opportunities** by allowing organizations to respond quickly to changes in the business environment and take advantage of new opportunities without overhauling existing systems.
+### Hvorfor er Enterprise Integration vigtigt?
 
-### **Monolithic Architecture**
-Monolithic applications are structured as a single, unified unit. All the functions, from the user interface to the database interactions, reside within one application. This structure makes monolithic applications easier to develop, deploy, and manage in the early stages, particularly for smaller projects.
+Enterprise integration er afgørende for moderne organisationer, fordi det tillader problemfri dataudveksling og forenkler komplekse IT-processer. Ved at implementere effektive EI-strategier kan organisationer:
+- **Dele kritiske oplysninger** på tværs af forskellige afdelinger, systemer og applikationer og sikre, at vigtige data altid er tilgængelige, hvor det er nødvendigt.
+- **Forenkle IT-processer** gennem effektivt samarbejde og strømlinede arbejdsgange, der reducerer redundans og manuelt arbejde.
+- **Maksimere muligheder** ved at lade organisationer reagere hurtigt på ændringer i forretningsmiljøet og udnytte nye muligheder uden at skulle overhale eksisterende systemer.
 
-#### Characteristics of Monolithic Applications:
-1. **Single Codebase:** All components of the application, including user interface, business logic, and data access layers, are combined into one cohesive unit.
-2. **Simple Deployment:** Since the entire application is a single executable or set of files, deploying updates or bug fixes is relatively straightforward. This simplicity makes monolithic applications appealing for small-scale applications [(Atlassian)](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith).
-3. **Centralized Management:** Monolithic applications are easier to debug and test because everything is centralized. Developers can trace issues quickly without needing to consider how multiple services might interact [(Amazon)](https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/),[(Hatchworks)](https://hatchworks.com/blog/software-development/monolithic-vs-microservices/).
+### **Monolitisk Arkitektur**
+Monolitiske applikationer er struktureret som en enkelt, samlet enhed. Alle funktioner, fra brugergrænsefladen til databaseinteraktioner, er placeret inden for én applikation. Denne struktur gør monolitiske applikationer lettere at udvikle, implementere og administrere i de tidlige stadier, især for mindre projekter.
 
-#### Disadvantages of Monolithic Architecture:
-1. **Scalability Challenges:** Scaling monolithic applications can be inefficient since the entire application must scale, even if only a small part needs more resources [(Openlegacy)](https://www.openlegacy.com/blog/monolithic-application).
-2. **Single Point of Failure:** If one module fails, it could bring down the entire system.
-3. **Difficulty in Adopting New Technologies:** Since all components are tightly coupled, changing a small function may require a complete overhaul [(HatchWorks
-)](https://hatchworks.com/blog/software-development/monolithic-vs-microservices/).
+#### Karakteristika for Monolitiske Applikationer:
+1. **Enkelt Kodebase:** Alle komponenter i applikationen, herunder brugergrænseflade, forretningslogik og dataadgangslag, er samlet i en sammenhængende enhed.
+2. **Enkel Implementering:** Da hele applikationen er en enkelt eksekverbar fil eller et sæt filer, er implementering af opdateringer eller fejlrettelser relativt ligetil. Denne enkelhed gør monolitiske applikationer tiltalende for småskala-applikationer [(Atlassian)](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith).
+3. **Centraliseret Administration:** Monolitiske applikationer er lettere at fejlfinde og teste, fordi alt er centraliseret. Udviklere kan hurtigt spore problemer uden at skulle overveje, hvordan flere tjenester kan interagere [(Amazon)](https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/), [(HatchWorks)](https://hatchworks.com/blog/software-development/monolithic-vs-microservices/).
 
-### **Microservices Architecture**
-Microservices architecture, in contrast, breaks down the application into smaller, independent services that communicate with each other via APIs. Each microservice focuses on a specific business function and operates as a standalone module. This architecture is designed to solve some of the limitations of monolithic systems by allowing scalability, flexibility, and continuous deployment [(Atlassian)](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith).
+#### Ulemper ved Monolitisk Arkitektur:
+1. **Skaleringsudfordringer:** Skalering af monolitiske applikationer kan være ineffektivt, da hele applikationen skal skaleres, selvom kun en lille del har brug for flere ressourcer [(OpenLegacy)](https://www.openlegacy.com/blog/monolithic-application).
+2. **Enkelt fejlpunkt:** Hvis en modul fejler, kan det trække hele systemet ned.
+3. **Sværhed ved at adoptere nye teknologier:** Da alle komponenter er tæt koblet, kan ændring af en lille funktion kræve en komplet overhaling [(HatchWorks)](https://hatchworks.com/blog/software-development/monolithic-vs-microservices/).
 
-#### Characteristics of Microservices:
-1. **Independent Deployment:** Each service can be updated, deployed, and scaled without affecting other services. This independence increases the agility of development teams and reduces risks associated with deployment [(Amazon)](https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/).
-2. **Service-Specific Technology Stacks:** Microservices can be built using different technology stacks suited to the specific service, allowing teams to adopt new frameworks and languages more easily [(Openlegacy)](https://www.openlegacy.com/blog/monolithic-application).
-3. **Loose Coupling:** Microservices are loosely coupled, meaning each service manages its own data, business logic, and processes independently, leading to greater resilience and flexibility in case of system failures [(Hatchworks)](https://hatchworks.com/blog/software-development/monolithic-vs-microservices/), [(Openlegacy)](https://www.openlegacy.com/blog/monolithic-application).
+### **Mikrotjenester Arkitektur**
+Mikrotjenester arkitektur, i modsætning, opdeler applikationen i mindre, uafhængige tjenester, der kommunikerer med hinanden via API'er. Hver mikrotjeneste fokuserer på en specifik forretningsfunktion og fungerer som en selvstændig modul. Denne arkitektur er designet til at løse nogle af begrænsningerne ved monolitiske systemer ved at tillade skalering, fleksibilitet og kontinuerlig implementering [(Atlassian)](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith).
 
-#### Disadvantages of Microservices:
-1. **Complexity in Management:** Managing and orchestrating multiple services can increase complexity, especially when services need to communicate with each other frequently [(Openlegacy)](https://www.openlegacy.com/blog/monolithic-application).
-2. **Operational Overhead:** Microservices require more infrastructure to manage, which can lead to higher operational costs. Additionally, debugging and testing are more challenging since each service needs to be tested both independently and as part of the overall system [(Atlassian)](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith).
+#### Karakteristika for Mikrotjenester:
+1. **Uafhængig Implementering:** Hver tjeneste kan opdateres, implementeres og skaleres uden at påvirke andre tjenester. Denne uafhængighed øger udviklingsteams smidighed og reducerer risici forbundet med implementering [(Amazon)](https://aws.amazon.com/compare/the-difference-between-monolithic-and-microservices-architecture/).
+2. **Tjenestespecifikke Teknologistakke:** Mikrotjenester kan bygges ved hjælp af forskellige teknologistakke, der er velegnede til den specifikke tjeneste, hvilket gør det lettere for teams at adoptere nye rammer og sprog [(OpenLegacy)](https://www.openlegacy.com/blog/monolithic-application).
+3. **Løs Kobling:** Mikrotjenester er løst koblet, hvilket betyder, at hver tjeneste styrer sine egne data, forretningslogik og processer uafhængigt, hvilket giver større modstandsdygtighed og fleksibilitet i tilfælde af systemfejl [(HatchWorks)](https://hatchworks.com/blog/software-development/monolithic-vs-microservices/), [(OpenLegacy)](https://www.openlegacy.com/blog/monolithic-application).
 
-### **When to Use Monolithic vs. Microservices**
-Choosing between monolithic and microservices architectures depends on the size, complexity, and goals of the application. **Monolithic** is often preferred for small to medium-sized applications where simplicity and quick deployment are essential. **Microservices**, on the other hand, are better suited for large, complex systems that require continuous updates, scalability, and flexibility [(Hatchworks)](https://hatchworks.com/blog/software-development/monolithic-vs-microservices/), [(Openlegacy)](https://www.openlegacy.com/blog/monolithic-application).
+#### Ulemper ved Mikrotjenester:
+1. **Kompleksitet i Administration:** Administration og orkestrering af flere tjenester kan øge kompleksiteten, især når tjenester ofte skal kommunikere med hinanden [(OpenLegacy)](https://www.openlegacy.com/blog/monolithic-application).
+2. **Operationel Overhead:** Mikrotjenester kræver mere infrastruktur at administrere, hvilket kan føre til højere driftsomkostninger. Desuden er fejlfinding og testning mere udfordrende, da hver tjeneste skal testes både uafhængigt og som en del af det samlede system [(Atlassian)](https://www.atlassian.com/microservices/microservices-architecture/microservices-vs-monolith).
 
-### **Hypothetical Technology Stack for Enterprise Integration**
+### **Hvornår skal man bruge Monolitisk vs. Mikrotjenester**
+Valget mellem monolitisk og mikrotjeneste arkitektur afhænger af applikationens størrelse, kompleksitet og mål. **Monolitisk** foretrækkes ofte til små til mellemstore applikationer, hvor enkelhed og hurtig implementering er afgørende. **Mikrotjenester** er derimod bedre egnet til store, komplekse systemer, der kræver kontinuerlige opdateringer, skalerbarhed og fleksibilitet [(HatchWorks)](https://hatchworks.com/blog/software-development/monolithic-vs-microservices/), [(OpenLegacy)](https://www.openlegacy.com/blog/monolithic-application).
 
-A hypothetical technology stack for a large enterprise integrating both monolithic and microservices-based applications might include:
+### **Hypotetisk Teknologistak for Enterprise Integration**
 
-1. **Version Control**: GitHub for managing code across distributed teams.
+En hypotetisk teknologistak for en stor virksomhed, der integrerer både monolitiske og mikrotjeneste-baserede applikationer, kan inkludere:
+
+1. **Versionskontrol**: GitHub til at administrere kode på tværs af distribuerede teams.
 2. **Backend**:
-   - **Monolithic**: Java using Spring Boot for core business logic.
-   - **Microservices**: Node.js and Python services running in Docker containers.
-3. **API Gateway**: Kong or AWS API Gateway to handle communication between services and external users.
-4. **Data Storage**:
-   - **Monolithic**: PostgreSQL for relational database management.
-   - **Microservices**: MongoDB for NoSQL databases, allowing each service to manage its own data store.
-5. **Messaging Queue**: RabbitMQ or Apache Kafka to enable asynchronous messaging between services.
-6. **Frontend**: React.js as the user interface that interacts with backend services through APIs.
+   - **Monolitisk**: Java ved hjælp af Spring Boot til forretningslogik.
+   - **Mikrotjenester**: Node.js og Python-tjenester, der kører i Docker-containere.
+3. **API Gateway**: Kong eller AWS API Gateway til at håndtere kommunikation mellem tjenester og eksterne brugere.
+4. **Databaselagring**:
+   - **Monolitisk**: PostgreSQL til relationsdatabaser.
+   - **Mikrotjenester**: MongoDB til NoSQL databaser, så hver tjeneste kan styre sin egen datalagring.
+5. **Meddelelseskø**: RabbitMQ eller Apache Kafka til at muliggøre asynkrone beskeder mellem tjenester.
+6. **Frontend**: React.js som brugergrænsefladen, der interagerer med backend-tjenester gennem API'er.
 
+### **Diagramstandarder**
 
-### **Diagramming Standards**
+Når man designer enterprise integrationsløsninger, anvendes følgende diagramstandarder almindeligvis:
 
-When designing enterprise integration solutions, the following diagramming standards are commonly used:
+- **UML (Unified Modeling Language)**: UML anvendes bredt til at repræsent
 
-- **UML (Unified Modeling Language)**: UML is widely used to represent software systems and their components. It includes various types of diagrams, such as class diagrams, sequence diagrams, and component diagrams, which can help model the interactions between integrated systems.
+ere softwaresystemer og deres komponenter. Det inkluderer forskellige typer diagrammer, såsom klassediagrammer, sekvensdiagrammer og komponentdiagrammer, som kan hjælpe med at modellere interaktionerne mellem integrerede systemer.
 
-- **BPMN (Business Process Model and Notation)**: BPMN is used for representing business processes in a graphical form. It is especially useful for modeling workflows and showing how different systems and services interact within a process. BPMN diagrams use standard symbols to show activities, decision points, and data flows between systems.
+- **BPMN (Business Process Model and Notation)**: BPMN anvendes til at repræsentere forretningsprocesser i en grafisk form. Det er især nyttigt til at modellere arbejdsgange og vise, hvordan forskellige systemer og tjenester interagerer inden for en proces. BPMN-diagrammer bruger standard symboler til at vise aktiviteter, beslutningspunkter og dataflow mellem systemer.
 
-Here is a basic example of a UML sequence diagram for an integration scenario:
+Her er et grundlæggende eksempel på et UML-sekvensdiagram for et integrationsscenarie:
 
 ```
-User --> Web App --> API Gateway --> Microservice --> Database
+Bruger --> Web App --> API Gateway --> Mikrotjeneste --> Database
 ```
 
-This diagram shows how a user interacts with a web app, which communicates through an API gateway, then triggers a microservice that interacts with a database.
+Dette diagram viser, hvordan en bruger interagerer med en webapp, der kommunikerer gennem en API-gateway, derefter udløser en mikrotjeneste, der interagerer med en database.
 
+### **Kode for et Integrationsmønster: Pipes and Filters**
 
-### **Code for an Integration Pattern: Pipes and Filters**
+Mønstret **Pipes and Filters** bruges almindeligvis i enterprise integration til at transformere eller behandle data gennem en række behandlingsskridt. Hvert behandlingsskridt (et filter) modtager input fra det forrige trin og sender sin output til det næste trin gennem et rør.
 
-The **Pipes and Filters** pattern is commonly used in enterprise integration to transform or process data through a series of processing steps. Each processing step (a filter) receives input from the previous step and passes its output to the next step through a pipe.
+#### **Pipes and Filters Eksempel**
 
-#### **Pipes and Filters Example**
-
-In a **Java** implementation of the Pipes and Filters pattern, each filter processes data and passes it along to the next:
+I en **Java**-implementering af Pipes and Filters-mønstret behandler hvert filter data og sender det videre til det næste:
 
 ```java
-// Abstract Filter Class
+// Abstrakt Filter Klasse
 public abstract class Filter {
     protected Filter next;
     
@@ -103,7 +102,7 @@ public abstract class Filter {
     public abstract String process(String input);
 }
 
-// Concrete Filters
+// Konkrete Filtre
 public class UpperCaseFilter extends Filter {
     @Override
     public String process(String input) {
@@ -122,7 +121,7 @@ public class TrimFilter extends Filter {
     }
 }
 
-// Main Execution
+// Hovedudførelse
 public class PipeAndFilterExample {
     public static void main(String[] args) {
         Filter filter = new UpperCaseFilter().linkWith(new TrimFilter());
@@ -133,53 +132,53 @@ public class PipeAndFilterExample {
 }
 ```
 
-#### Explanation:
-- **UpperCaseFilter**: Converts input to uppercase.
-- **TrimFilter**: Trims the whitespace.
-- The filters are linked together using `linkWith()`, allowing them to process data sequentially.
+#### Forklaring:
+- **UpperCaseFilter**: Konverterer input til store bogstaver.
+- **TrimFilter**: Fjerner overskydende mellemrum.
+- Filtrene er forbundet ved hjælp af `linkWith()`, hvilket tillader dem at behandle data sekventielt.
 
-This example demonstrates how data flows through a series of processing steps (filters), each applying a transformation before passing the result to the next step.
+Dette eksempel demonstrerer, hvordan data flyder gennem en række behandlingsskridt (filtre), hvor hvert trin anvender en transformation, før resultatet sendes videre til næste trin.
 
-### **Key Enterprise Integration Patterns**
+### **Vigtige Enterprise Integration Mønstre**
 
-#### **Data-Centric Integration**
+#### **Data-Centreret Integration**
 
-This pattern focuses on establishing a **single source of truth** for data within an organization. It ensures that all applications use consistent, reliable data. Common approaches include:
+Dette mønster fokuserer på at etablere en **single source of truth** for data inden for en organisation. Det sikrer, at alle applikationer bruger konsistente, pålidelige data. Almindelige tilgange inkluderer:
 
-- **ETL (Extract, Transform, Load)**: Moves and transforms data between systems.
-- **Shared Database**: Allows multiple applications to access the same data source.
+- **ETL (Extract, Transform, Load)**: Flytter og transformerer data mellem systemer.
+- **Delt Database**: Tillader flere applikationer at få adgang til den samme datakilde.
 
-#### **Event-Driven Integration**
+#### **Event-Drevet Integration**
 
-Event-driven integration enables systems to react in real-time to changes and events in other systems.
+Event-drevet integration gør det muligt for systemer at reagere i realtid på ændringer og begivenheder i andre systemer.
 
-- **Message-Driven Communication**: Facilitates asynchronous communication between systems.
-- **Event Broadcasting**: Applications publish events that other systems can react to.
+- **Besked-Drevet Kommunikation**: Muliggør asynkron kommunikation mellem systemer.
+- **Event Broadcasting**: Applikationer publicerer hændelser, som andre systemer kan reagere på.
 
-#### **3 Application-Centric Integration**
+#### **Applikations-Centreret Integration**
 
-Application-centric integration focuses on promoting modularity and reusability in applications by using APIs. This is often used in **microservices** architectures.
+Applikationscentreret integration fokuserer på at fremme modularitet og genanvendelighed i applikationer ved hjælp af API'er. Dette bruges ofte i **mikrotjeneste** arkitekturer.
 
-### **Case Studies**
+### **Case Studier**
 
 #### MNG Kargo
 
-MNG Kargo, a Turkish delivery company, saw a significant rise in business during the e-commerce boom. To meet this demand, they:
-- Automated API-based connections with e-commerce providers using **IBM API management**.
-- Created a developer portal for partners using a **secure gateway** to facilitate seamless data flow from sale to delivery.
-- Hosted a hackathon to innovate service enhancements.
-Their next step includes adopting microservices to streamline their complex cargo processing ([IBM](https://www.ibm.com/think/topics/enterprise-integration)).
+MNG Kargo, et tyrkisk leveringsfirma, oplevede en betydelig stigning i forretningen under e-handelsboomet. For at imødekomme denne efterspørgsel:
+- Automatiserede de API-baserede forbindelser med e-handelsudbydere ved hjælp af **IBM API management**.
+- Skabte en udviklerportal for partnere ved hjælp af en **sikker gateway** for at muliggøre problemfri dataflow fra salg til levering.
+- Vært for et hackathon for at innovere serviceforbedringer.
+Deres næste skridt inkluderer at adoptere mikrotjenester for at strømline deres komplekse fragtbehandlingsprocesser ([IBM](https://www.ibm.com/think/topics/enterprise-integration)).
 
 #### Helsinki Regional Transport Authority
 
-Helsinki Regional Transport Authority (HSL) serves 1.5 million people and needed to update its ticketing system. They:
-- Used **IBM Cloud Pak for Integration** to connect their applications with data across multiple systems.
-- Transitioned from virtual machines to microservices using **Red Hat OpenShift**.
-- Achieved a seamless migration with no service outages during the pandemic.
-Next steps include using AI to analyze the vast amounts of data they collect daily for personalized services ([IBM](https://www.ibm.com/think/topics/enterprise-integration)).
+Helsinki Regional Transport Authority (HSL), der betjener 1,5 millioner mennesker, havde behov for at opdatere deres billet- og system. De:
+- Brugte **IBM Cloud Pak for Integration** til at forbinde deres applikationer med data på tværs af flere systemer.
+- Overgik fra virtuelle maskiner til mikrotjenester ved hjælp af **Red Hat OpenShift**.
+- Opnåede en problemfri migration uden serviceafbrydelser under pandemien.
+Næste skridt inkluderer at bruge AI til at analysere de enorme mængder data, de indsamler dagligt for at tilbyde personlige tjenester ([IBM](https://www.ibm.com/think/topics/enterprise-integration)).
 
-### **Conclusion**
+### **Konklusion**
 
-Enterprise integration is vital for modern businesses, enabling different systems to communicate and work together efficiently. By using API management, application integration, and messaging, organizations can create scalable and flexible IT environments. While monolithic architectures are easier to manage for small applications, they struggle with scalability. Microservices address these challenges by offering flexibility and independent deployment, making them ideal for complex systems. 
+Enterprise integration er afgørende for moderne virksomheder, da det muliggør, at forskellige systemer kan kommunikere og arbejde sammen effektivt. Ved at bruge API-styring, applikationsintegration og beskeder kan organisationer skabe skalerbare og fleksible IT-miljøer. Mens monolitiske arkitekturer er lettere at administrere for små applikationer, kæmper de med skalerbarhed. Mikrotjenester løser disse udfordringer ved at tilbyde fleksibilitet og uafhængig implementering, hvilket gør dem ideelle til komplekse systemer.
 
-Real-world examples like **MNG Kargo** and **Helsinki Regional Transport Authority** show how effective integration can enhance business processes, improve agility, and support smooth transitions to modern architectures such as microservices. Ultimately, enterprise integration drives operational efficiency, scalability, and long-term growth.
+Reelle eksempler som **MNG Kargo** og **Helsinki Regional Transport Authority** viser, hvordan effektiv integration kan forbedre forretningsprocesser, øge smidigheden og støtte problemfrie overgange til moderne arkitekturer som mikrotjenester. I sidste ende driver enterprise integration operationel effektivitet, skalerbarhed og langsigtet vækst.
